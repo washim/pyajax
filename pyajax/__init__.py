@@ -11,7 +11,7 @@ config = [{
 script = pyajax(config).buildscript()
 return script
 """
-class pyajax:
+class ajaxevent:
     def __init__(self, config):
         self.config = config
     
