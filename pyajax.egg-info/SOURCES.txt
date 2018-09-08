@@ -1,6 +1,7 @@
 README.md
 setup.py
 pyajax/__init__.py
+pyajax/ajaxevent.py
 pyajax.egg-info/PKG-INFO
 pyajax.egg-info/SOURCES.txt
 pyajax.egg-info/dependency_links.txt
