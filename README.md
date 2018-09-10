@@ -20,7 +20,7 @@ def index():
         }
     }]
     script = pyajax.buildscript(config)
-    return render_template('index.html', script=script)
+    return render_template('myname.html', script=script)
     
 @app.route("/ajaxname")
 def ajaxname():
@@ -29,7 +29,7 @@ def ajaxname():
 if __name__ == '__main__':
     app.run()
 
-### index.html
+### layout.html
 
 <!doctype html>
 <html lang="en">
@@ -38,7 +38,18 @@ if __name__ == '__main__':
     {% block javascript %}{% endblock %}
   </head>
   <body>
-      <div><input type="text" id="name" /> <input type="submit" id="submit" value="submit"/></div>
-      <div>My Name: <span id="output">?</span></div>
+      {% block content %}{% endblock %}
   </body>
 </html>
+
+### myname.html
+{% extends 'layout.html'%}
+
+{% block content %}
+<div><input type="text" id="name" /> <input type="submit" id="submit" value="submit"/></div>
+<div>My Name: <span id="output">?</span></div>
+{% endblock %}
+
+{% block javascript %}
+{{ script|safe }}
+{% endblock %}
