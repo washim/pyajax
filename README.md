@@ -5,6 +5,7 @@ I build this script to plot graph dynamically using ajax but you can use this fo
 
 ## Flask integration
 ### app.py
+<code>
 from flask import Flask, jsonify, render_template, request, url_for
 import pyajax
 
@@ -28,7 +29,7 @@ def ajaxname():
     
 if __name__ == '__main__':
     app.run()
-
+</code>
 ### layout.html
 
 <!doctype html>
