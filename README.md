@@ -31,7 +31,7 @@ if __name__ == '__main__':
     app.run()
 ```
 ### layout.html
-
+```
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,8 +42,9 @@ if __name__ == '__main__':
       {% block content %}{% endblock %}
   </body>
 </html>
-
+```
 ### myname.html
+```
 {% extends 'layout.html'%}
 
 {% block content %}
@@ -54,3 +55,4 @@ if __name__ == '__main__':
 {% block javascript %}
 {{ script|safe }}
 {% endblock %}
+```
